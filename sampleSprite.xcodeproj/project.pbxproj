@@ -15,6 +15,8 @@
 		817552161B09A6890072C846 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817552151B09A6890072C846 /* Images.xcassets */; };
 		817552191B09A6890072C846 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817552171B09A6890072C846 /* LaunchScreen.xib */; };
 		817552251B09A6890072C846 /* sampleSpriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817552241B09A6890072C846 /* sampleSpriteTests.swift */; };
+		817552301B09A8940072C846 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8175522E1B09A8940072C846 /* AssetManager.swift */; };
+		817552311B09A8940072C846 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8175522F1B09A8940072C846 /* ImageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		8175521E1B09A6890072C846 /* sampleSpriteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampleSpriteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		817552231B09A6890072C846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		817552241B09A6890072C846 /* sampleSpriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleSpriteTests.swift; sourceTree = "<group>"; };
+		8175522E1B09A8940072C846 /* AssetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
+		8175522F1B09A8940072C846 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		817552071B09A6890072C846 /* sampleSprite */ = {
 			isa = PBXGroup;
 			children = (
+				8175522E1B09A8940072C846 /* AssetManager.swift */,
+				8175522F1B09A8940072C846 /* ImageManager.swift */,
 				8175520A1B09A6890072C846 /* AppDelegate.swift */,
 				8175520C1B09A6890072C846 /* GameScene.sks */,
 				8175520E1B09A6890072C846 /* GameScene.swift */,
@@ -219,6 +225,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817552301B09A8940072C846 /* AssetManager.swift in Sources */,
+				817552311B09A8940072C846 /* ImageManager.swift in Sources */,
 				8175520F1B09A6890072C846 /* GameScene.swift in Sources */,
 				817552111B09A6890072C846 /* GameViewController.swift in Sources */,
 				8175520B1B09A6890072C846 /* AppDelegate.swift in Sources */,
