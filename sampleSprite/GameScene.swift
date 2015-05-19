@@ -10,8 +10,8 @@ import SpriteKit
 
 class GameScene: SKScene {
     var colume:CGFloat = 2
-    var spaceInItems:CGFloat = 5
-    var spaceAround:CGFloat = 5
+    var spaceInItems:CGFloat = 0
+    var spaceAround:CGFloat = 0
     
     private var imageManager:ImageManager!
     override func didMoveToView(view: SKView) {
@@ -32,6 +32,7 @@ class GameScene: SKScene {
             positionArray.append(position)
         }
 
+        /*
         for var i = 0; i < numOfImage; i++ {
             let index = NSIndexPath(forRow: i, inSection: 0)
             let imageObject:ImageObject = imageManager.getImageObjectIndexAt(index)!
@@ -60,6 +61,36 @@ class GameScene: SKScene {
 
             })
             
+        }
+        */
+        var nextPosition:CGPoint = CGPoint(x: 0, y: 0)
+        for var i = 0; i < 2; i++ {
+            let index = NSIndexPath(forRow: 1, inSection: 0)
+            let imageObject:ImageObject = imageManager.getImageObjectIndexAt(index)!
+            imageObject.getThumbnail({ (image) -> Void in
+                //let imageData:UIImage = image as UIImage
+                let imageData:UIImage = UIImage(named: "IMG_0469.jpg")!
+                let imageTexture = SKTexture(image: imageData)
+                let sprite = SKSpriteNode(texture: imageTexture)
+                let widthOfImage:CGFloat = (self.view!.frame.width - self.spaceAround*2 - self.spaceInItems*(self.colume-1))/self.colume
+                let size:CGSize = imageData.size
+                let scale:CGFloat = widthOfImage / size.width
+                sprite.xScale = scale
+                sprite.yScale = scale
+                let spriteSize:CGSize = sprite.size
+                let heightOfImage = size.height*scale
+                //let position:CGPoint = CGPoint(x: nextPosition.x+widthOfImage/2, y: nextPosition.y+heightOfImage/2)
+                let position:CGPoint = nextPosition//CGPoint(x: 0, y: 0)
+                sprite.anchorPoint = CGPoint(x: 0, y: 1)
+                let spritePosition = self.convertPointFromView( position )
+                sprite.position = spritePosition
+                if i % Int(self.colume) == 0 {
+                    nextPosition = CGPoint( x: spriteSize.width-25, y: 0 )
+                }else{
+                    nextPosition = CGPoint( x: position.x + spriteSize.width-25, y: position.y )
+                }
+                self.addChild(sprite)
+            })
         }
     }
     

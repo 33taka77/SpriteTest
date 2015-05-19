@@ -228,7 +228,7 @@ class Asset:ImageObject {
     }
     override func getThumbnail( callback: (image:UIImage)->Void ) {
         var imageData:UIImage?
-        PHImageManager.defaultManager().requestImageForAsset(asset, targetSize: CGSizeMake(250, 250), contentMode:       PHImageContentMode.AspectFit, options: nil, resultHandler: { (image, info) -> Void in
+        PHImageManager.defaultManager().requestImageForAsset(asset, targetSize: CGSizeMake(512, 512), contentMode:       PHImageContentMode.AspectFit, options: nil, resultHandler: { (image, info) -> Void in
             callback(image: image)
         })
     }

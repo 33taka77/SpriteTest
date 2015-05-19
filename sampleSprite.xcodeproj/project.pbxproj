@@ -17,6 +17,8 @@
 		817552251B09A6890072C846 /* sampleSpriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817552241B09A6890072C846 /* sampleSpriteTests.swift */; };
 		817552301B09A8940072C846 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8175522E1B09A8940072C846 /* AssetManager.swift */; };
 		817552311B09A8940072C846 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8175522F1B09A8940072C846 /* ImageManager.swift */; };
+		817552341B0AD68D0072C846 /* IMG_0469.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 817552321B0AD68D0072C846 /* IMG_0469.JPG */; };
+		817552351B0AD68D0072C846 /* IMG_0470.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 817552331B0AD68D0072C846 /* IMG_0470.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		817552241B09A6890072C846 /* sampleSpriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleSpriteTests.swift; sourceTree = "<group>"; };
 		8175522E1B09A8940072C846 /* AssetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
 		8175522F1B09A8940072C846 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		817552321B0AD68D0072C846 /* IMG_0469.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0469.JPG; sourceTree = "<group>"; };
+		817552331B0AD68D0072C846 /* IMG_0470.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0470.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 				817552101B09A6890072C846 /* GameViewController.swift */,
 				817552121B09A6890072C846 /* Main.storyboard */,
 				817552151B09A6890072C846 /* Images.xcassets */,
+				817552321B0AD68D0072C846 /* IMG_0469.JPG */,
+				817552331B0AD68D0072C846 /* IMG_0470.JPG */,
 				817552171B09A6890072C846 /* LaunchScreen.xib */,
 				817552081B09A6890072C846 /* Supporting Files */,
 			);
@@ -204,9 +210,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817552351B0AD68D0072C846 /* IMG_0470.JPG in Resources */,
 				817552191B09A6890072C846 /* LaunchScreen.xib in Resources */,
 				817552161B09A6890072C846 /* Images.xcassets in Resources */,
 				8175520D1B09A6890072C846 /* GameScene.sks in Resources */,
+				817552341B0AD68D0072C846 /* IMG_0469.JPG in Resources */,
 				817552141B09A6890072C846 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
