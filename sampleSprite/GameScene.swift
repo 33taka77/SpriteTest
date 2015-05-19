@@ -9,7 +9,7 @@
 import SpriteKit
 
 class GameScene: SKScene {
-    var colume:CGFloat = 3
+    var colume:CGFloat = 2
     var spaceInItems:CGFloat = 5
     var spaceAround:CGFloat = 5
     
@@ -39,13 +39,20 @@ class GameScene: SKScene {
             let drawHeightOfImage = drawWidthofImage * size.height/size.width
             imageObject.getThumbnail({ (image) -> Void in
                 let imageData:UIImage = image as UIImage
+                let size:CGSize = imageData.size
+                let scale:CGFloat = drawWidthofImage / size.width
                 let imageTexture = SKTexture(image: imageData)
                 let sprite = SKSpriteNode(texture: imageTexture)
+                sprite.xScale = scale
+                sprite.yScale = scale
                 let n = i % Int(self.colume)
                 let point:CGPoint = positionArray[n] as CGPoint
-                let spritePosition = self.convertPointFromView( point )
+                let newX = point.x + drawWidthofImage/2
+                let newY = point.y + drawHeightOfImage/2
+                let newPoint:CGPoint = CGPoint(x: newX, y: newY)
+                let spritePosition = self.convertPointFromView( newPoint )
                 sprite.position = spritePosition
-                sprite.anchorPoint = CGPoint(x: 0, y: 0)
+                //sprite.anchorPoint = CGPoint(x: 0, y: 0)
                 let pos:CGPoint = positionArray[n] as CGPoint
                 let height = pos.y + self.spaceInItems + drawHeightOfImage
                 positionArray[n] = CGPointMake(pos.x, height)
