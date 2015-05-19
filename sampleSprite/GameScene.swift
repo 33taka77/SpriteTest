@@ -12,6 +12,8 @@ class GameScene: SKScene {
     var colume:CGFloat = 2
     var spaceInItems:CGFloat = 0
     var spaceAround:CGFloat = 0
+    let widthAjust:CGFloat = 25
+    let heightAjust:CGFloat = 30
     
     private var imageManager:ImageManager!
     override func didMoveToView(view: SKView) {
@@ -64,7 +66,7 @@ class GameScene: SKScene {
         }
         */
         var nextPosition:CGPoint = CGPoint(x: 0, y: 0)
-        for var i = 0; i < 2; i++ {
+        for var i = 0; i < numOfImage; i++ {
             let index = NSIndexPath(forRow: 1, inSection: 0)
             let imageObject:ImageObject = imageManager.getImageObjectIndexAt(index)!
             imageObject.getThumbnail({ (image) -> Void in
@@ -84,10 +86,10 @@ class GameScene: SKScene {
                 sprite.anchorPoint = CGPoint(x: 0, y: 1)
                 let spritePosition = self.convertPointFromView( position )
                 sprite.position = spritePosition
-                if i % Int(self.colume) == 0 {
-                    nextPosition = CGPoint( x: spriteSize.width-25, y: 0 )
+                if i % Int(self.colume) == 0 && i != 0 {
+                    nextPosition = CGPoint( x: 0, y: position.y+spriteSize.height-self.heightAjust )
                 }else{
-                    nextPosition = CGPoint( x: position.x + spriteSize.width-25, y: position.y )
+                    nextPosition = CGPoint( x: position.x + spriteSize.width-self.widthAjust, y: position.y )
                 }
                 self.addChild(sprite)
             })
